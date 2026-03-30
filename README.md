@@ -116,7 +116,7 @@ npm start
 ![Admin](./Screenshots/AdminDaashboard.png)
 
 ### 🚚 Pickup Page
-![Pickup](./Screenshots/Pickup.png)
+![Pickup](./Screenshots/Agent.png)
 
 ### 👤 User Dashboard
 ![User](./Screenshots/userDashboard.png)
