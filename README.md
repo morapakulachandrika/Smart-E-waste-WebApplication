@@ -102,18 +102,24 @@ npm start
 
 ---
 
+
+
 ## 📸 Screenshots
 
 ### 🏠 Home Page
+![Home](./Screenshots/Home.png)
 
 ### 🔐 Login Page
+![Login](./Screenshots/Login.png)
 
 ### 📊 Admin Dashboard
+![Admin](./Screenshots/AdminDaashboard.png)
 
-### 🚚 Pickup Agent Dashboard
+### 🚚 Pickup Page
+![Pickup](./Screenshots/Pickup.png)
 
 ### 👤 User Dashboard
-
+![User](./Screenshots/userDashboard.png)
 ---
 
 ## 📈 Future Enhancements
