@@ -1,0 +1,215 @@
+/* ================= PAGE CONTAINER ================= */
+.agent-dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 20px;
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #f5f6f8;
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+.agent-history-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.back-btn {
+  background-color: #6c757d;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 6px 14px;
+  border: none;
+}
+
+/* ================= FILTER BAR (MATCH USER HISTORY) ================= */
+.agent-history-filters {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 22px;
+}
+
+/* Uniform height & style */
+.agent-history-filters select,
+.agent-history-filters input,
+.agent-history-filters .btn {
+  height: 42px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+/* Dropdowns */
+.agent-history-filters select {
+  width: 160px;
+}
+
+/* Search box */
+.agent-history-filters input {
+  flex: 1;
+  min-width: 240px;
+}
+
+/* Buttons */
+.agent-history-filters .btn {
+  padding: 0 18px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.agent-history-filters .btn-primary {
+  background-color: #4f46e5;
+  border: none;
+}
+
+.agent-history-filters .btn-secondary {
+  background-color: #6b7280;
+  border: none;
+}
+
+/* ================= TABLE ================= */
+.table-responsive {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table th {
+  background-color: #111827;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 14px;
+  white-space: nowrap;
+}
+
+.table td {
+  font-size: 14px;
+  padding: 14px;
+  vertical-align: middle;
+}
+
+/* Address column wider */
+.table td:nth-child(5) {
+  min-width: 280px;
+}
+
+/* ================= STATUS BADGES ================= */
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.assigned {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.status-badge.in_progress {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.completed {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+/* ================= PAGINATION ================= */
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  padding: 16px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.pagination-wrapper .btn {
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-size: 14px;
+}
+
+.page-info {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .agent-history-filters {
+    flex-wrap: wrap;
+  }
+
+  .agent-history-filters select,
+  .agent-history-filters input,
+  .agent-history-filters .btn {
+    width: 100%;
+  }
+}
+/* Filter container */
+.filter-bar {
+  display: flex;
+  align-items: center; /* vertically center everything */
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Search input */
+.filter-bar input[type="text"] {
+  flex: 1;            /* take remaining space */
+  max-width: 300px;   /* reduce width */
+  height: 36px;       /* match button height */
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+/* Buttons (Apply / Reset) */
+.filter-bar button {
+  height: 36px;          /* same height */
+  padding: 0 14px;       /* horizontal padding */
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;   /* center text vertically */
+  justify-content: center;
+}
+
+/* Specific button colors */
+.filter-bar .apply-btn {
+  background-color: #5b4fff; /* purple blue */
+  color: #fff;
+}
+
+.filter-bar .reset-btn {
+  background-color: #6c757d; /* gray */
+  color: #fff;
+}
+
+/* Hover effect */
+.filter-bar button:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}

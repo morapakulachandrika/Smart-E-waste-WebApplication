@@ -1,0 +1,461 @@
+/* ================= PAGE ================= */
+.ud-page {
+  min-height: 100vh;
+  background: #f6f7fb;
+  padding: 30px 16px;
+}
+
+.ud-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* ================= HEADER ================= */
+.ud-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ud-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.ud-header span {
+  color: #2563eb;
+}
+
+.ud-header p {
+  margin-top: 4px;
+  color: #6b7280;
+}
+
+.ud-header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+/* ================= BUTTONS ================= */
+.ud-new-btn {
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  font-weight: 700;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.ud-history-btn {
+  background: #6b7280;
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================= STATS ================= */
+.ud-stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.stat-card {
+  border-radius: 16px;
+  padding: 0px 8px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+}
+
+.stat-card h4 {
+  font-size: 1.3rem;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+.stat-card p {
+  font-size: 1.4rem;
+  margin-top: 5px;
+}
+
+/* Colors exactly like screenshot */
+.stat-card:nth-child(1) { background: #3b82f6; } /* ALL */
+.stat-card.pending { background: #f59e0b; }
+.stat-card.accepted { background: #22c55e; }
+.stat-card.rejected { background: #ef4444; }
+.stat-card.rescheduled { background: #8b5cf6; }
+
+/* ================= TABLE ================= */
+.ud-table-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.ud-table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #111827;
+  padding: 16px;
+  background: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+td {
+  padding: 16px;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+  background: #f8fafc;
+}
+
+/* ================= STATUS BADGES ================= */
+.ud-status {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.ud-status.pending { background: #fde68a; color: #92400e; }
+.ud-status.accepted { background: #bbf7d0; color: #166534; }
+.ud-status.rejected { background: #fecaca; color: #991b1b; }
+
+.ud-status.reschedule_requested { background: #ddd6fe; color: #5b21b6; }
+.ud-status.reschedule_approved { background: #bbf7d0; color: #166534; }
+.ud-status.reschedule_rejected { background: #fecaca; color: #991b1b; }
+
+/* ================= PICKUP STATUS ================= */
+.pickup-status {
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.pickup-status.assigned { background: #e0e7ff; color: #3730a3; }
+.pickup-status.in-progress { background: #ffedd5; color: #9a3412; }
+.pickup-status.completed { background: #dcfce7; color: #166534; }
+.pickup-status.pending { background: #f3f4f6; color: #374151; }
+
+/* ================= RESCHEDULE BUTTON ================= */
+.res-btn {
+  background: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ================= CHARTS ================= */
+.ud-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+
+.chart-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+.chart-card h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* ================= PAGINATION ================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.page-item {
+  list-style: none;
+}
+
+.page-link {
+  min-width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.page-item.active .page-link {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+}
+
+.page-item.disabled .page-link {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ================= TEXT ================= */
+.muted {
+  color: #6b7280;
+}
+
+.empty-text,
+.loading-text {
+  text-align: center;
+  color: #6b7280;
+  padding: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .ud-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ud-charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .ud-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .ud-stats {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================= MOBILE STAT CARDS ================= */
+@media (max-width: 768px) {
+  .ud-stats {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ud-stats::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .ud-stats::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+  }
+
+  .stat-card {
+    flex: 0 0 auto;
+    min-width: 150px;
+    height: 70px;
+    padding: 10px 8px;
+    border-radius: 14px;
+    scroll-snap-align: start;
+  }
+
+  .stat-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .stat-card p {
+    font-size: 1.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+}
+
+
+/* ================= DASHBOARD SECTION ORDER ================= */
+
+/* Parent container already uses flex-column */
+.ud-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* STATS always first */
+.ud-stats {
+  order: 1;
+}
+
+/* TABLE should appear after stats */
+.ud-table-card {
+  order: 2;
+}
+
+/* CHARTS should always be below table */
+.ud-charts {
+  order: 3;
+}
+
+
+/* ================= CHART COLOR SYSTEM ================= */
+
+/* Color tokens (same as stat cards) */
+:root {
+  --ud-blue: #3b82f6;        /* Total / Primary */
+  --ud-green: #22c55e;       /* Accepted */
+  --ud-yellow: #f59e0b;      /* Pending */
+  --ud-red: #ef4444;         /* Rejected */
+  --ud-purple: #8b5cf6;      /* Rescheduled */
+}
+
+/* ================= PIE / DONUT CHART ================= */
+/* Order: Pending, Accepted, Rejected, Rescheduled */
+
+.recharts-pie-sector:nth-child(1) path {
+  fill: var(--ud-yellow);
+}
+
+.recharts-pie-sector:nth-child(2) path {
+  fill: var(--ud-green);
+}
+
+.recharts-pie-sector:nth-child(3) path {
+  fill: var(--ud-red);
+}
+
+.recharts-pie-sector:nth-child(4) path {
+  fill: var(--ud-purple);
+}
+
+/* Soft shadow like admin dashboard */
+.recharts-pie-sector path {
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.18));
+}
+
+/* ================= LEGEND COLORS ================= */
+.recharts-legend-item:nth-child(1) .recharts-legend-item-text {
+  color: var(--ud-yellow);
+  font-weight: 700;
+}
+
+.recharts-legend-item:nth-child(2) .recharts-legend-item-text {
+  color: var(--ud-green);
+  font-weight: 700;
+}
+
+.recharts-legend-item:nth-child(3) .recharts-legend-item-text {
+  color: var(--ud-red);
+  font-weight: 700;
+}
+
+.recharts-legend-item:nth-child(4) .recharts-legend-item-text {
+  color: var(--ud-purple);
+  font-weight: 700;
+}
+
+/* ================= BAR CHART ================= */
+/* Bar chart colors for up to 10 bars, cycling colors */
+.recharts-bar-rectangle:nth-child(1) path {
+  fill: #22c55e; /* accepted - green */
+}
+.recharts-bar-rectangle:nth-child(2) path {
+  fill: #3b82f6; /* extra - blue */
+}
+.recharts-bar-rectangle:nth-child(3) path {
+  fill: #f59e0b; /* pending - orange */
+}
+.recharts-bar-rectangle:nth-child(4) path {
+  fill: #ef4444; /* rejected - red */
+}
+.recharts-bar-rectangle:nth-child(5) path {
+  fill: #8b5cf6; /* rescheduled - purple */
+}
+.recharts-bar-rectangle:nth-child(6) path {
+  fill: #22c55e; /* cycle green */
+}
+.recharts-bar-rectangle:nth-child(7) path {
+  fill: #3b82f6; /* cycle blue */
+}
+.recharts-bar-rectangle:nth-child(8) path {
+  fill: #f59e0b; /* cycle orange */
+}
+.recharts-bar-rectangle:nth-child(9) path {
+  fill: #ef4444; /* cycle red */
+}
+.recharts-bar-rectangle:nth-child(10) path {
+  fill: #8b5cf6; /* cycle purple */
+}
+
+
+/* Add border to stat cards */
+.stat-card {
+  border: 2px solid #686f7e; /* light gray border */
+  /* keep existing styles */
+  border-radius: 16px;
+  padding: 0px 10px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 1000;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: transform 0.25s ease;
+}
+
+/* Add border to chart cards */
+.chart-card {
+  border: 2px solid #7088b8; /* light gray border */
+  /* keep existing styles */
+  background: #fffbfb;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}
+
+/* Add border to table card */
+.ud-table-card {
+  border: 2px solid #191a1e; /* light gray border */
+  /* keep existing styles */
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+}

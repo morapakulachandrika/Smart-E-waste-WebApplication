@@ -1,0 +1,120 @@
+.res-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.res-modal {
+  background: #fff;
+  width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: pop 0.25s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.res-modal-header {
+  background: #f5f7fa;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.res-modal-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.res-close-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.res-modal-body {
+  padding: 18px;
+}
+
+.res-info p {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.res-pending {
+  margin: 10px 0;
+  padding: 8px;
+  background: #fff3cd;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.res-field {
+  margin-top: 12px;
+}
+
+.res-field label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.res-field input,
+.res-field textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.res-error {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.res-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.res-cancel-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.res-submit-btn {
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.res-submit-btn:disabled {
+  background: #9e9e9e;
+  cursor: not-allowed;
+}

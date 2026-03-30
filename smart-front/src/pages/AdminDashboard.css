@@ -1,0 +1,239 @@
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dashboard Title */
+h2.fw-bold {
+  font-size: 2rem;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn-success {
+  background: linear-gradient(90deg, #34d399, #10b981);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-success:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.btn-danger {
+  background: linear-gradient(90deg, #f87171, #ef4444);
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-danger:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+/* Cards */
+.card {
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Pending Users */
+.card h4 {
+  margin-bottom: 1rem;
+}
+
+.pending-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.pending-user:last-child {
+  border-bottom: none;
+}
+
+.pending-user b {
+  font-size: 1rem;
+  color: #111827;
+}
+
+/* Table styling for All Users */
+.table {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.table thead th {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+}
+
+.table tbody tr {
+  background: #ffffff;
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.table tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Status badges */
+.table td {
+  font-weight: 500;
+}
+
+.status {
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.status.approved {
+  background-color: #10b981;
+}
+
+.status.pending {
+  background-color: #f59e0b;
+}
+
+.status.rejected {
+  background-color: #ef4444;
+}
+
+/* MiniToast positioning */
+.mini-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+}
+.admin-action-btn {
+  min-width: 220px;        /* same width for both buttons */
+  height: 44px;            /* same height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+/* ===============================
+   MOBILE RESPONSIVE BUTTON ALIGNMENT
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Pending user row layout */
+  .pending-user {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Button wrapper (important) */
+  .pending-user .btn-group,
+  .pending-user .action-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Approve / Reject buttons */
+  .admin-action-btn {
+    width: 100%;
+    min-width: unset;
+    height: 44px;
+    font-size: 0.95rem;
+  }
+
+  /* Table buttons (if any inside table) */
+  .table td .btn {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  /* Pagination center alignment on mobile */
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .pagination .page-link {
+    min-width: 40px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  /* Filter bar inputs stack nicely */
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-bar select,
+  .filter-bar input,
+  .filter-bar button {
+    width: 100%;
+  }
+}
+.table-wrapper {
+  overflow-x: auto; /* allows horizontal scroll if table is wide */
+  padding-left: 20px;
+  padding-right: 15px;
+}
+/* Table wrapper for horizontal spacing */
+.table-wrapper {
+  overflow-x: auto;       /* allows scroll if table is too wide */
+  padding-left: 20px;     /* left space */
+  padding-right: 20px;    /* right space */
+}
+
+/* Pagination wrapper */
+.pagination-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pagination-wrapper button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-wrapper button.active {
+  background: #10b981;
+  color: white;
+  border-color: #10b981;
+}
+
+.pagination-wrapper button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

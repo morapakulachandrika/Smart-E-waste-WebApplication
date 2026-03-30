@@ -1,0 +1,120 @@
+/* ==============================
+   ADMIN E-WASTE HISTORY WRAPPER
+   ============================== */
+.admin-ewaste-history {
+  width: 100%;
+}
+
+/* ==============================
+   TABLE BASE FIXES
+   ============================== */
+.admin-ewaste-history .table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  table-layout: fixed; /* 🔴 VERY IMPORTANT */
+}
+
+/* Header styling (lighter than before) */
+.admin-ewaste-history .table thead th {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #000;
+  border-bottom: 2px solid #000;
+  white-space: nowrap;
+}
+
+/* Cells */
+.admin-ewaste-history .table td {
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  vertical-align: middle;
+  background: #fff;
+  border-radius: 6px;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* ==============================
+   ADDRESS — FORCE 2 ROWS ONLY
+   ============================== */
+.admin-ewaste-history .address-cell {
+  max-width: 220px;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: #444;
+  font-weight: 500;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;      /* ✅ max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ==============================
+   IMAGE THUMBNAILS
+   ============================== */
+.admin-ewaste-history td img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 6px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-ewaste-history td img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* ==============================
+   PICKUP STATUS FIX (NO OVERFLOW)
+   ============================== */
+.pickup-status {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.pickup-status.pending {
+  background: #ffe8a1;
+}
+
+.pickup-status.assigned {
+  background: #cfe2ff;
+}
+
+.pickup-status.in-progress {
+  background: #ffd6cc;
+}
+
+.pickup-status.completed {
+  background: #c7f0d8;
+}
+
+/* ==============================
+   RESPONSIVE TABLE SCROLL (MOBILE)
+   ============================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; /* ✅ horizontal scrollbar */
+}
+
+@media (max-width: 768px) {
+  .admin-ewaste-history .table {
+    min-width: 1100px; /* forces scroll instead of overlap */
+  }
+
+  .admin-ewaste-history .address-cell {
+    max-width: 180px;
+    font-size: 0.8rem;
+  }
+}

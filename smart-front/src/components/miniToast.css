@@ -1,0 +1,41 @@
+.mini-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 0.8rem 1rem;
+  border-radius: 0.75rem;
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  animation: slideIn 0.4s ease-out;
+  z-index: 1000;
+}
+
+.toast-icon {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.mini-toast.success {
+  background: linear-gradient(90deg, #34d399, #10b981);
+}
+
+.mini-toast.error {
+  background: linear-gradient(90deg, #f87171, #ef4444);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

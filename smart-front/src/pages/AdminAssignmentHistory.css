@@ -1,0 +1,187 @@
+/* ================= ROOT ================= */
+:root {
+  --primary: #2563eb;      /* blue */
+  --success: #16a34a;      /* green */
+  --warning: #f59e0b;      /* amber */
+  --danger: #dc2626;       /* red */
+  --info: #0891b2;         /* cyan */
+  --gray: #6b7280;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --border: #e5e7eb;
+}
+
+/* ================= PAGE ================= */
+.admin-history-container {
+  padding: 24px;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+.back-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+h2 {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* ================= SEARCH ================= */
+.search-input {
+  width: 280px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  outline: none;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  border-color: var(--primary);
+}
+
+/* ================= AGENT CARDS ================= */
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.agent-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.agent-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.agent-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.agent-card p {
+  font-size: 13px;
+  color: var(--gray);
+  margin: 6px 0;
+}
+
+.agent-card span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* ================= TABLE ================= */
+.table-wrapper {
+  background: var(--card);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #f1f5f9;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px;
+  text-align: left;
+}
+
+td {
+  padding: 14px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+tr:hover {
+  background: #f9fafb;
+}
+
+/* ================= PICKUP STATUS ================= */
+.pickup {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+
+/* ================= PAGINATION ================= */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pagination button:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ================= BACK TO AGENTS ================= */
+.btn-back {
+  background: none;
+  border: none;
+ 
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+}
+th {
+  background: #f1f5f9;      /* visible light grey */
+  color: #111827;           /* dark text */
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px;
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+}
+/* ================= PICKUP STATUS ================= */
+.pickup {
+  display: inline-block;      /* make sure it respects padding */
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;        /* prevent text from wrapping */
+  overflow: visible;          /* prevent clipping */
+  min-width: 80px;            /* optional: ensures enough space for longer statuses */
+  text-align: center;         /* center align the text in the pill */
+}

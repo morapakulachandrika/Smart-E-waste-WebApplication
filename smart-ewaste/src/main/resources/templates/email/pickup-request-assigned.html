@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Pickup Request Assigned</title>
+</head>
+
+<body style="margin:0; padding:0; background-color:#f4f6f8; font-family:Arial, Helvetica, sans-serif; color:#333;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" style="padding:20px 0; background-color:#f4f6f8;">
+    <tr>
+      <td align="center">
+
+        <!-- Email Card -->
+        <table width="600" cellpadding="0" cellspacing="0"
+          style="background-color:#ffffff; border-radius:8px; padding:30px; box-shadow:0 4px 10px rgba(0,0,0,0.08);">
+
+          <!-- Header -->
+          <tr>
+            <td style="text-align:center; padding-bottom:20px;">
+              <h2 style="margin:0; color:#1e88e5;">
+                🚚 New Pickup Request Assigned
+              </h2>
+            </td>
+          </tr>
+
+          <!-- Content -->
+          <tr>
+            <td style="font-size:15px; line-height:1.6;">
+
+              <p style="margin-top:0;">
+                Hello,
+              </p>
+
+              <p>
+                A new <strong>e-waste pickup request</strong> has been assigned to you.
+                Please review the details below and complete the pickup as scheduled.
+              </p>
+
+              <!-- Details Box -->
+              <table width="100%" cellpadding="0" cellspacing="0"
+                style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:6px; padding:15px; margin:20px 0;">
+
+                <tr>
+                  <td style="padding:6px 0;">
+                    <strong>Request ID:</strong> {{requestId}}
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:6px 0;">
+                    <strong>Pickup Address:</strong> {{pickupAddress}}
+                  </td>
+                </tr>
+
+              </table>
+
+              <p>
+                Please ensure timely pickup and coordinate with the customer if required.
+              </p>
+
+              <p style="margin-bottom:0;">
+                Thank you for supporting <strong>Smart E-Waste</strong> ♻️
+              </p>
+
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding-top:30px; text-align:center; font-size:13px; color:#6b7280;">
+              <p style="margin:0;">
+                — Smart E-Waste Team
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- End Card -->
+
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

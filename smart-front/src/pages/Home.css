@@ -1,0 +1,256 @@
+/* ---------------- MARQUEE ---------------- */
+.marquee {
+  width: 100%;
+  background: #e8ffe8;
+  padding: 12px 0;
+}
+
+.marquee-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #087f23;
+  white-space: nowrap;
+  animation: marqueeMove 14s linear infinite;
+}
+
+@keyframes marqueeMove {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px auto;
+  padding: 0 60px;
+  gap: 20px; /* Reduced gap between left and right */
+}
+
+.hero-left {
+  flex: 1;
+  padding-right: 20px; /* Bring closer to right section */
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #0b5f3c;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.28rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00b36b, #008f55);
+  padding: 15px 32px;
+  border-radius: 45px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+  background: #00995a;
+  transform: translateX(8px) scale(1.03);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-circle {
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e6f7ee;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------------- E-WASTE TITLE ---------------- */
+.ewaste-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0b5f3c;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+/* ---------------- E-WASTE CARDS ---------------- */
+/* Desktop + larger screens */
+.ewaste-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* flexible columns */
+  gap: 24px;
+  margin: 20px auto; /* auto center */
+  max-width: 1200px; /* restrict grid width */
+}
+
+.ew-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 16px;
+  text-align: center;
+  transition: 0.25s;
+  height: auto; /* let it adjust based on content */
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+.ew-card-img {
+  width: 100%;
+  height: 160px; /* slightly taller for desktop */
+  border-radius: 16px;
+  object-fit: cover;
+}
+.ew-card-title {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a0a0a;
+}
+
+
+.ew-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+}
+
+
+/* ----------------------------------------------------
+   RESPONSIVE DESIGN (MOBILE + TABLETS)
+---------------------------------------------------- */
+
+/* ---------- Tablets (max-width: 992px) ---------- */
+@media (max-width: 992px) {
+  .hero-container {
+    padding: 0 30px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-image-circle {
+    width: 320px;
+    height: 320px;
+  }
+
+  .ewaste-grid {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px 20px;
+  }
+}
+
+/* ---------- Mobile (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+  /* Fix marquee text */
+  .marquee-text {
+    font-size: 1rem;
+    animation-duration: 10s;
+  }
+
+  /* Stack hero section vertically */
+  .hero-container {
+    flex-direction: column;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-left {
+    padding-right: 0;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-btn {
+    font-size: 1.1rem;
+    padding: 12px 24px;
+  }
+
+  .hero-image-circle {
+    width: 280px;
+    height: 280px;
+    margin-top: 20px;
+  }
+
+  /* E-waste cards layout */
+  .ewaste-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin: 15px 15px;
+  }
+
+  .ew-card {
+    height: 220px;
+  }
+
+  .ew-card-img {
+    height: 120px;
+  }
+}
+
+/* ---------- Small Mobile (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .hero-image-circle {
+    width: 230px;
+    height: 230px;
+  }
+
+  /* 1-column grid on very small screens */
+  .ewaste-grid {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 10px 20px;
+  }
+
+  .ew-card {
+    height: 240px;
+  }
+
+  .ew-card-img {
+    height: 135px;
+  }
+}

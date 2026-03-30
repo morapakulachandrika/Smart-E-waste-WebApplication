@@ -1,0 +1,244 @@
+.steps-section {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* -------------------- HEADING -------------------- */
+.steps-heading {
+  font-size: 38px;
+  font-weight: 800;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Emoji styling */
+.steps-heading::before {
+  content: "🌱";
+  font-size: 34px;
+}
+
+/* -------------------- UNDERLINE -------------------- */
+.underline {
+  width: 160px;
+  height: 5px;
+  background: linear-gradient(90deg, #3a803a, #85b786, #3a803a);
+  margin: 10px auto 45px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(80, 150, 80, 0.6);
+}
+
+/* -------------------- FLEX WRAPPER -------------------- */
+.steps-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  flex-wrap: wrap;
+}
+
+.step-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* ===================================================== */
+/* -------------------- OCTAGON CARD -------------------- */
+/* ===================================================== */
+
+.octagon-card {
+  width: 270px;
+  height: 270px;
+  background: rgb(245, 245, 245);
+  border-radius: 22px;
+  position: relative;
+  overflow: hidden;
+
+  clip-path: polygon(
+    30% 0%, 70% 0%,
+    100% 30%, 100% 70%,
+    70% 100%, 30% 100%,
+    0% 70%, 0% 30%
+  );
+
+  border: 2px solid #e2e2e2;
+
+  /* NEW **premium shadow** */
+  box-shadow: 
+    0 12px 28px rgba(0, 0, 0, 0.20),
+    0 4px 12px rgba(0, 0, 0, 0.10);
+
+  transition: 0.35s ease-in-out;
+}
+
+.octagon-card:hover {
+  transform: scale(1.07);
+  box-shadow: 
+    0 18px 40px rgba(0, 0, 0, 0.25),
+    0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================================================== */
+/* -------------------- MASK BEFORE HOVER -------------------- */
+/* ===================================================== */
+
+.mask-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(60, 99, 29, 0.93);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  gap: 12px;
+  font-weight: 600;
+  transform: translateY(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.mask-icon {
+  font-size: 50px;
+}
+
+.mask-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ===================================================== */
+/* -------------------- DESCRIPTION AFTER HOVER -------- */
+/* ===================================================== */
+
+.octagon-card:hover .mask-content {
+  transform: translateY(100%);
+}
+
+.description {
+  position: absolute;
+  inset: 0;
+  padding: 22px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #000;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.octagon-card:hover .description {
+  opacity: 1;
+}
+
+/* ===================================================== */
+/* -------------------- ARROWS -------------------------- */
+/* ===================================================== */
+
+.arrow {
+  font-size: 38px;
+  color: #1a1a1a;
+  font-weight: 900;
+  margin-left: 20px;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* ===================== RESPONSIVE ADJUSTMENTS ===================== */
+
+/* Small laptops / tablets */
+@media (max-width: 1024px) {
+  .steps-wrapper {
+    gap: 30px;
+  }
+
+  .octagon-card {
+    width: 220px;
+    height: 220px;
+  }
+
+  .mask-icon {
+    font-size: 42px;
+  }
+
+  .mask-title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 17px;
+    padding: 18px;
+  }
+
+  .arrow {
+    font-size: 32px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+/* Tablets / large phones */
+@media (max-width: 768px) {
+  .steps-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .step-item {
+    flex-direction: column;
+  }
+
+  /* Rotate arrows downward for vertical layout */
+  .arrow {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .steps-heading {
+    font-size: 28px;
+  }
+
+  .steps-heading::before {
+    font-size: 26px;
+  }
+
+  .underline {
+    width: 120px;
+    height: 4px;
+    margin-bottom: 35px;
+  }
+
+  .octagon-card {
+    width: 180px;
+    height: 180px;
+  }
+
+  .mask-icon {
+    font-size: 36px;
+  }
+
+  .mask-title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .arrow {
+    font-size: 28px;
+  }
+}

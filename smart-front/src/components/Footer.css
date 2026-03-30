@@ -1,0 +1,12 @@
+.footer {
+  width: 100%;
+  margin: 0;
+}
+
+.footer hr {
+  margin: 12px 0 0 0; /* remove extra spacing */
+}
+
+.footer small {
+  line-height: 1.4; /* tighter lines for small text */
+}

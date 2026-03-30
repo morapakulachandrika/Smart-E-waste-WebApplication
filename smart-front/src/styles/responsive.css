@@ -1,0 +1,140 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100%;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+
+.custom-header {
+  width: 100%;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.header-logo {
+  font-size: 26px;
+  font-weight: 700;
+  background: #007bff;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 8px;
+}
+
+.emoji-avatar-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+.custom-dropdown {
+  min-width: 180px;
+}
+
+@media (max-width: 576px) {
+  .custom-header .container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}
+
+h1, h2, h3, h4 {
+  word-break: break-word;
+}
+
+form {
+  width: 100%;
+}
+
+input, select, textarea {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+button {
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+.dashboard-container,
+.user-dashboard,
+.profile-container {
+  width: 100%;
+  padding: 10px;
+}
+
+.dashboard-box,
+.section-box,
+.profile-box {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #f8f9fa;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+footer {
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+footer .row {
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  footer .row {
+    flex-direction: row;
+  }
+}
+
+footer svg, footer img {
+  max-width: 22px;
+  height: auto;
+}
+
+footer small {
+  font-size: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-wrapper {
+  padding: 12px;
+  width: 100%;
+}

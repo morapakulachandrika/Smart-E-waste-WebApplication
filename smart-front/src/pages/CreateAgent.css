@@ -1,0 +1,60 @@
+.create-agent-card {
+  border-radius: 16px;
+  padding: 35px 30px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.create-agent-card:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.create-agent-card h3 {
+  font-weight: 700;
+  color: #111827;
+}
+
+.create-agent-card label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.create-agent-card input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  margin-top: 6px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.create-agent-card input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59,130,246,0.25);
+}
+
+.create-agent-card button {
+  padding: 14px 0;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.create-agent-card button:hover {
+  background: linear-gradient(90deg, #059669, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 640px) {
+  .create-agent-card {
+    padding: 25px 20px;
+  }
+}

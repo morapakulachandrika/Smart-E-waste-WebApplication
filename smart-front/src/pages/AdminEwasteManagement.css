@@ -1,0 +1,577 @@
+/* PAGE WRAPPER */
+.admin-ew-wrapper {
+  max-width: 1400px;
+  margin: auto;
+  padding: 25px 24px 40px;
+  background: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  color: #111827;
+}
+
+/* HEADER */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.header-row h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.history-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.history-btn:hover {
+  background-color: #2563eb;
+}
+
+/* ===============================
+   COUNT CARDS – FIXED SIZE (FINAL)
+   =============================== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+/* HARD FIXED CARD */
+.card-box {
+  height: 75px;
+  width: 100%;
+  border-radius: 10px;
+  border: 0.5px solid #521313;
+  color: #fff;
+  cursor: pointer;
+
+  /* 🔒 INTERNAL GRID – NOT FLEX */
+  display: grid;
+  grid-template-rows: 20px 1fr;
+  place-items: center;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+/* TITLE */
+.card-box h4 {
+margin-bottom: 0px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 30px;
+  height: 5px;
+  white-space: nowrap;
+}
+
+/* COUNT */
+.card-box p {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+/* REMOVE SIZE CHANGING EFFECTS */
+.card-box:hover {
+  transform: translateY(-2px);
+}
+
+/* COLORS */
+.card-box.all { background: #3b82f6; }
+.card-box.pending { background: #f59e0b; }
+.card-box.accepted { background: #22c55e; }
+.card-box.rejected { background: #ef4444; }
+.card-box.reschedule { background: #8b5cf6; }
+
+/* ===============================
+   TABLET
+   =============================== */
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===============================
+   MOBILE – HORIZONTAL SCROLL
+   =============================== */
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .card-box {
+    min-width: 220px;
+    height: 96px;
+    flex-shrink: 0;
+  }
+
+  .cards::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .cards::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+  }
+}
+
+
+/* TABLE */
+/* ===== TABLE SCROLL FIX ===== */
+
+
+.table-card {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+
+
+.table {
+  min-width: 1000px; /* adjust if you have more columns */
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+
+.table th, .table td {
+  font-size: 14px;
+  padding: 12px 10px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  white-space: nowrap;
+}
+
+.table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.table tr {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.table tr td:first-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.table tr td:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.user-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.address-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.badge {
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ACTION BUTTONS */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-approve,
+.btn-reject {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-approve {
+  background: #22c55e;
+  color: white;
+}
+
+.btn-reject {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-approve:hover,
+.btn-reject:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-approve:disabled,
+.btn-reject:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* CHARTS */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.chart-card h5 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* IMAGE MODAL */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* SECTION HEADING */
+.section-heading {
+  margin: 12px 0 16px;
+  padding-left: 4px;
+}
+
+.section-heading h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.section-heading span {
+  font-size: 13px;
+  color: #45484e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .table th, .table td {
+    font-size: 13px;
+    padding: 10px 6px;
+  }
+}
+/* ===== DATE FILTER BAR ===== */
+.date-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px; /* space between items */
+  margin-bottom: 20px;
+}
+
+.date-filter-bar > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-filter-bar label {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.date-filter-bar input[type="date"] {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.date-filter-bar .btn-set,
+.date-filter-bar .btn-reset {
+  margin-top: 22px; /* align with inputs */
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.date-filter-bar .btn-set {
+  background-color: #28a745;
+  color: white;
+}
+
+.date-filter-bar .btn-reset {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* ===== CHARTS GRID ===== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Make device-wise bar chart wider and more readable */
+.chart-card.full-width {
+  grid-column: span 2;
+}
+
+.chart-card.full-width .recharts-wrapper {
+  overflow-x: auto; /* allow horizontal scroll if many devices */
+}
+
+/* Responsive adjustment */
+@media (max-width: 992px) {
+  .chart-card.full-width {
+    grid-column: span 1;
+  }
+}
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===============================
+   HORIZONTAL SCROLL CARDS (MOBILE)
+   =============================== */
+@media (max-width: 768px) {
+
+  /* Cards container behaves like table width */
+  .cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+
+    /* smooth swipe */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide ugly scrollbar (Chrome, Edge, Safari) */
+  .cards::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .cards::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+  }
+
+  .cards::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Each card same width as table columns feel */
+  .card-box {
+    min-width: 220px;
+    flex-shrink: 0;
+    border-radius: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .cards::after {
+    content: "← Swipe →";
+    font-size: 12px;
+    color: #6b7280;
+    position: absolute;
+    right: 16px;
+    top: -18px;
+  }
+}
+@media (max-width: 768px) {
+  .table-card {
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .table {
+    min-width: 900px;
+  }
+}
+.address-cell {
+  max-width: 220px;
+  white-space: normal;
+  word-break: break-word;
+}
+/* =========================
+   MOBILE OPTIMIZATION – SMALL CARDS
+   ========================= */
+@media (max-width: 768px) {
+
+  /* Cards container - horizontal scroll */
+  .cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;               /* spacing between cards */
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+
+    /* optional: show scrollbar always */
+    scrollbar-width: thin;      /* Firefox */
+  }
+
+  /* Show scrollbar for Webkit browsers */
+  .cards::-webkit-scrollbar {
+    height: 6px;
+  }
+  .cards::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+  }
+  .cards::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Each card smaller and flexible */
+  .card-box {
+             /* takes ~1/3 of screen width */
+    height: 70px;
+    padding: 6px 8px;
+    border-radius: 10px; 
+    display: grid;
+    grid-template-rows: 16px 1fr;
+    place-items: center;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+
+  .card-box:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Card title */
+  .card-box h4 {
+    font-size: 0.75rem;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 2px;
+  }
+
+  /* Card count */
+  .card-box p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  /* Optional swipe hint */
+  .cards::after {
+    content: "← Swipe →";
+    font-size: 11px;
+    color: #6b7280;
+    position: absolute;
+    right: 8px;
+    top: -18px;
+  }
+}
+
+/* Extra small screens (<480px) – super compact */
+@media (max-width: 480px) {
+  .card-box {
+    flex: 0 0 45%;          /* slightly larger for readability */
+    height: 60px;
+    padding: 4px 6px;
+  }
+
+  .card-box h4 {
+    font-size: 0.7rem;
+  }
+
+  .card-box p {
+    font-size: 14px;
+  }
+
+  .cards {
+    gap: 6px;
+  }
+}

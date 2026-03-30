@@ -1,0 +1,142 @@
+/* ===============================
+   PAGE SCOPE (CRITICAL)
+   =============================== */
+.admin-pickup-agents {
+  background: #f8fafc;
+}
+
+/* ===============================
+   CARD
+   =============================== */
+.admin-pickup-agents .card {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* ===============================
+   TABLE WRAPPER
+   =============================== */
+.admin-pickup-agents .table-responsive {
+  overflow-x: auto;
+}
+
+/* ===============================
+   TABLE BASE (SCOPED)
+   =============================== */
+.admin-pickup-agents .admin-agents-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+/* ===============================
+   HEADER
+   =============================== */
+.admin-pickup-agents .admin-agents-table thead th {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: #f1f5f9;
+  color: #111827;
+  padding: 10px 12px;
+  white-space: nowrap;
+}
+
+/* ===============================
+   ROW
+   =============================== */
+.admin-pickup-agents .admin-agents-table tbody tr {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Rounded corners */
+.admin-pickup-agents .admin-agents-table tbody tr td:first-child {
+  border-radius: 12px 0 0 12px;
+}
+
+.admin-pickup-agents .admin-agents-table tbody tr td:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+/* ===============================
+   CELLS
+   =============================== */
+.admin-pickup-agents .admin-agents-table td {
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+/* ===============================
+   COLUMN WIDTH CONTROL
+   =============================== */
+.admin-pickup-agents .admin-agents-table th:nth-child(1),
+.admin-pickup-agents .admin-agents-table td:nth-child(1) {
+  width: 60px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.admin-pickup-agents .admin-agents-table th:nth-child(2),
+.admin-pickup-agents .admin-agents-table td:nth-child(2) {
+  min-width: 180px;
+}
+
+.admin-pickup-agents .admin-agents-table th:nth-child(3),
+.admin-pickup-agents .admin-agents-table td:nth-child(3) {
+  min-width: 320px;
+}
+
+.admin-pickup-agents .admin-agents-table th:nth-child(4),
+.admin-pickup-agents .admin-agents-table td:nth-child(4) {
+  width: 140px;
+}
+
+.admin-pickup-agents .admin-agents-table th:nth-child(5),
+.admin-pickup-agents .admin-agents-table td:nth-child(5) {
+  width: 120px;
+  text-align: center;
+}
+
+/* ===============================
+   EMAIL + PHONE FIX
+   =============================== */
+.admin-pickup-agents .email-cell {
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.admin-pickup-agents .phone-cell {
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* ===============================
+   BADGE
+   =============================== */
+.admin-pickup-agents .badge {
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* ===============================
+   MOBILE
+   =============================== */
+@media (max-width: 768px) {
+  .admin-pickup-agents .admin-agents-table {
+    min-width: 820px;
+  }
+
+  .admin-pickup-agents .admin-agents-table td,
+  .admin-pickup-agents .admin-agents-table th {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+}

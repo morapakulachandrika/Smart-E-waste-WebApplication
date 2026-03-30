@@ -1,0 +1,168 @@
+/* ================= Layout ================= */
+.agent-dashboard {
+  max-width: 92%;          /* ⬅️ tighter left/right spacing */
+  margin: auto;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* ================= Cards Row ================= */
+.cards {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 14px;               /* ⬅️ smaller gap between cards */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ================= Card Size Control ================= */
+.cards .card {
+  flex: 0 0 220px;           /* ✅ fixed width */
+  max-width: 220px;
+  padding: 0px 0px;
+}
+
+
+/* Hover */
+.cards .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+}
+
+/* Card Text */
+.cards .card h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.cards .card h3 {
+  font-size: 1.7rem;       /* ⬅️ reduced number size */
+  font-weight: 800;
+  margin: 0;
+}
+
+/* ================= Table ================= */
+.table-responsive {
+  margin-top: 28px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+}
+
+/* ================= Pagination ================= */
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+/* ================= Mobile Responsive for Cards ================= */
+@media (max-width: 768px) {
+  .cards {
+    flex-wrap: nowrap !important;       /* keep cards in a row */
+    overflow-x: auto;                   /* horizontal scroll */
+    -webkit-overflow-scrolling: touch;  /* smooth scrolling */
+    gap: 10px;                          /* small gap between cards */
+    padding-bottom: 10px;
+  }
+
+  .cards .card {
+    flex: 0 0 auto;       /* width adjusts to content */
+    min-width: 120px;     /* never too small */
+    max-width: 160px;     /* limit expansion */
+    white-space: nowrap;   /* prevent text wrapping */
+    text-align: center;
+    font-size: 0.7rem;    /* slightly smaller text */
+    padding: 0px 0px;
+    box-sizing: border-box;
+  }
+
+  /* Adjust heading font inside cards */
+  .cards .card h5 {
+    font-size: 0.72rem;
+    font-weight: 600;
+  }
+
+  .cards .card h3 {
+    font-size: 1rem;   /* slightly smaller number for mobile */
+    font-weight: 800;
+    margin: 0;
+  }
+
+  /* Scrollbar styling */
+  .cards {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+  }
+
+  .cards::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .cards::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+}
+
+
+/* ================= Action Buttons ================= */
+.action-btn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* Specific button colors (matching bootstrap theme) */
+.btn-in-progress {
+  background-color: #ffc107; /* bootstrap warning */
+  color: #212529;
+}
+
+.btn-in-progress:hover {
+  background-color: #e0a800;
+  color: #fff;
+}
+
+.btn-completed {
+  background-color: #28a745; /* bootstrap success */
+  color: #fff;
+}
+
+.btn-completed:hover {
+  background-color: #218838;
+}
+
+.btn-disabled {
+  background-color: #6c757d;
+  color: #fff;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+/* History Button in Dashboard Header */
+.agent-dashboard > .d-flex > .btn-outline-primary {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease-in-out;
+}
+
+.agent-dashboard > .d-flex > .btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  background-color: #0d6efd;
+  color: #fff;
+}

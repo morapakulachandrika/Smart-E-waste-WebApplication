@@ -1,0 +1,51 @@
+
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+}
+
+.header-logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+.header-logo { animation: float 4s ease-in-out infinite; }
+
+.marquee {
+  background: linear-gradient(90deg, rgba(16,185,129,0.08), rgba(99,102,241,0.06));
+  padding: 8px 0;
+}
+.marquee p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 18s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+.card:hover {
+  transform: translateY(-6px);
+  transition: transform .18s ease;
+}
+
+
+.app-footer {
+  background: linear-gradient(90deg,#0f172a,#334155);
+  color: white;
+}

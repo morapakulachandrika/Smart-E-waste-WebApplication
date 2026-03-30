@@ -1,0 +1,18 @@
+# IntelliJ / IDE
+.idea/
+
+# Maven
+target/
+*.class
+*.jar
+
+# Node
+node_modules/
+
+# Env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+smart-ewaste/uploads/

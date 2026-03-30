@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pickup Agent Account Created</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; max-width: 600px; margin: auto; }
+        .header { font-size: 20px; font-weight: bold; color: #333; margin-bottom: 10px; }
+        .content { font-size: 16px; color: #555; line-height: 1.5; }
+        .credentials { background-color: #eee; padding: 10px; border-radius: 5px; margin-top: 10px; font-family: monospace; }
+        .footer { margin-top: 20px; font-size: 14px; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">🎉 Your Pickup Agent Account is Ready!</div>
+        <div class="content">
+            Hello {{name}},<br><br>
+            Your account has been successfully created for the E-Waste Management system.<br><br>
+            <strong>Login Details:</strong>
+            <div class="credentials">
+                Email: {{email}}<br>
+                Password: {{password}}
+            </div>
+            <br>
+            Please log in and change your password after first login for security.<br><br>
+            Thank you!<br>
+            - Smart E-Waste Team
+        </div>
+        <div class="footer">
+            This is an automated message. Please do not reply.
+        </div>
+    </div>
+</body>
+</html>
